@@ -40,9 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
           ),
 
-    body: Center(
+      ),
+      body: Center(child:Column(
 
-        child: FlatButton(
+
+        children: <Widget>[
+      
+          FlatButton(
+
           color: Colors.teal,
           textColor: Colors.white,
           onPressed: () {
@@ -51,9 +56,27 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Create Tasbeeh'),
         ),
 
-      ),
+          FlatButton(
+            color: Colors.teal,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen3()));
+            },
+            child: Text('Counter Tasbeeh'),
+          ),
+          FlatButton(
+            color: Colors.teal,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen4()));
+            },
+            child: Text('View all Tasbeeh'),
+          ),
+
+          ],
       ),
 
+    ),
     );
 
 
@@ -69,8 +92,13 @@ class _Screen2State extends State<Screen2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Tasbeeh Counter App'),
-          backgroundColor: Colors.blueAccent),
+        title: Center(
+          child: Text(
+            ('Tasbeeh Counter App'),
+          ),
+        ),
+
+      ),
       body: Center(
         child: FlatButton(
           color: Colors.blueAccent,
@@ -85,3 +113,62 @@ class _Screen2State extends State<Screen2> {
   }
 }
 
+class Screen3 extends StatefulWidget {
+  @override
+  _Screen3State createState() => _Screen3State();
+}
+class _Screen3State extends State<Screen3> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            ('Tasbeeh Counter App'),
+          ),
+        ),
+
+      ),
+      body: Center(
+        child: FlatButton(
+          color: Colors.blueAccent,
+          textColor: Colors.white,
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
+          },
+          child: Text('HOME'),
+        ),
+      ),
+    );
+  }
+}
+
+class Screen4 extends StatefulWidget {
+  @override
+  _Screen4State createState() => _Screen4State();
+}
+class _Screen4State extends State<Screen4> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            ('Tasbeeh Counter App'),
+          ),
+        ),
+
+      ),
+      body: Center(
+        child: FlatButton(
+          color: Colors.blueAccent,
+          textColor: Colors.white,
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
+          },
+          child: Text('Back TO HOME'),
+        ),
+      ),
+    );
+  }
+}
