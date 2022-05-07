@@ -17,18 +17,24 @@ class _Screen2State extends State<Screen2> {
             ('Tasbeeh Counter App'),
           ),
         ),
-
       ),
       body: Center(
-        child: FlatButton(
-          color: Colors.blueAccent,
-          textColor: Colors.white,
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
-          },
-          child: Text('GO TO HOME'),
-        ),
-      ),
+        child:Column (children: <Widget>[
+           TextField(
+              autocorrect: true,
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                hintText: 'Type Tasbeeh Name',
+              )),
+           FlatButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
+            },
+            child: Text(''),
+          ),
+],
+    ),
+    ),
     );
   }
 }
