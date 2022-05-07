@@ -39,39 +39,47 @@ class _MyHomePageState extends State<MyHomePage> {
     ('Tasbeeh Counter App'),
     ),
           ),
-
       ),
-      body: Center(child:Column(
-
-
-        children: <Widget>[
-      
-          FlatButton(
-
-          color: Colors.teal,
-          textColor: Colors.white,
-          onPressed: () {
+      body: Center(
+        child:Column(children: <Widget>[
+          Container(
+              margin: EdgeInsets.all(10),
+           child: FlatButton(
+            color: Colors.teal,
+            textColor: Colors.white,
+            onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen2()));
-          },
-          child: Text('Create Tasbeeh'),
-        ),
+            },
+            child: Text('Create Tasbeeh',
+                style: TextStyle(fontSize: 22),),
+            padding: EdgeInsets.all(33),
+        )),
 
-          FlatButton(
+         Container(
+             margin: EdgeInsets.all(8),
+          child: FlatButton(
             color: Colors.teal,
             textColor: Colors.white,
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen3()));
             },
-            child: Text('Counter Tasbeeh'),
-          ),
-          FlatButton(
+            child: Text('Counter Tasbeeh',
+              style: TextStyle(fontSize: 22),),
+            padding: EdgeInsets.all(27),
+          )),
+
+      Container(
+          margin: EdgeInsets.all(8),
+         child: FlatButton(
             color: Colors.teal,
             textColor: Colors.white,
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen4()));
             },
-            child: Text('View all Tasbeeh'),
-          ),
+            child: Text('View all Tasbeeh',
+              style: TextStyle(fontSize: 22),),
+            padding: EdgeInsets.all(30),
+         )),
 
           ],
       ),
