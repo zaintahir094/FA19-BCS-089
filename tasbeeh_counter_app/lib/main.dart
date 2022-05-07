@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_counter_app/screen2.dart';
+import 'package:tasbeeh_counter_app/screen3.dart';
+import 'package:tasbeeh_counter_app/screen4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +23,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -33,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor:const Color(0xFFEFEFEF),
       appBar: AppBar(
           title: Center(
             child: Text(
@@ -41,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
       ),
       body: Center(
+
         child:Column(children: <Widget>[
           Container(
               margin: EdgeInsets.all(10),
@@ -91,92 +97,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class Screen2 extends StatefulWidget {
-  @override
-  _Screen2State createState() => _Screen2State();
-}
-class _Screen2State extends State<Screen2> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            ('Tasbeeh Counter App'),
-          ),
-        ),
 
-      ),
-      body: Center(
-        child: FlatButton(
-          color: Colors.blueAccent,
-          textColor: Colors.white,
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
-          },
-          child: Text('GO TO HOME'),
-        ),
-      ),
-    );
-  }
-}
-
-class Screen3 extends StatefulWidget {
-  @override
-  _Screen3State createState() => _Screen3State();
-}
-class _Screen3State extends State<Screen3> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            ('Tasbeeh Counter App'),
-          ),
-        ),
-
-      ),
-      body: Center(
-        child: FlatButton(
-          color: Colors.blueAccent,
-          textColor: Colors.white,
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
-          },
-          child: Text('HOME'),
-        ),
-      ),
-    );
-  }
-}
-
-class Screen4 extends StatefulWidget {
-  @override
-  _Screen4State createState() => _Screen4State();
-}
-class _Screen4State extends State<Screen4> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            ('Tasbeeh Counter App'),
-          ),
-        ),
-
-      ),
-      body: Center(
-        child: FlatButton(
-          color: Colors.blueAccent,
-          textColor: Colors.white,
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
-          },
-          child: Text('Back TO HOME'),
-        ),
-      ),
-    );
-  }
-}
