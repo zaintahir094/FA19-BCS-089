@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "741544866135",
+    "project_id": "tasbeeh-app-89ac1",
+    "storage_bucket": "tasbeeh-app-89ac1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741544866135:android:4d087426d649761315ce12",
+        "android_client_info": {
+          "package_name": "com.example.tasbeeh_counter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741544866135-2v39a6jj2vmeaspcn2pjehlfosif056m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbDsXjEMeVo2zFqaHjSDl16-X1Wic_nmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741544866135-2v39a6jj2vmeaspcn2pjehlfosif056m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

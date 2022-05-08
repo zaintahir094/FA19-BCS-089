@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:tasbeeh_counter_app/screen2.dart';
 import 'package:tasbeeh_counter_app/screen3.dart';
 import 'package:tasbeeh_counter_app/screen4.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -50,33 +55,41 @@ class _MyHomePageState extends State<MyHomePage> {
         child:Column(children: <Widget>[
           Container(
               margin: EdgeInsets.all(10),
-           child: FlatButton(
+           child: SizedBox(
+             width: double.infinity,
+            child: FlatButton(
             color: Colors.teal,
             textColor: Colors.white,
             onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen2()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen2())
+            );
             },
             child: Text('Create Tasbeeh',
                 style: TextStyle(fontSize: 22),),
             padding: EdgeInsets.all(33),
-        )),
+        )),),
 
          Container(
              margin: EdgeInsets.all(8),
-          child: FlatButton(
-            color: Colors.teal,
-            textColor: Colors.white,
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen3()));
+              child: SizedBox(
+               width: double.infinity,
+                 child: FlatButton(
+                  color: Colors.teal,
+                  textColor: Colors.white,
+                  onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Screen3()));
             },
-            child: Text('Counter Tasbeeh',
+                 child: Text('Counter Tasbeeh',
               style: TextStyle(fontSize: 22),),
             padding: EdgeInsets.all(27),
-          )),
+          )),),
 
       Container(
-          margin: EdgeInsets.all(8),
-         child: FlatButton(
+
+            margin: EdgeInsets.all(8),
+            child: SizedBox(
+            width: double.infinity,
+            child: FlatButton(
             color: Colors.teal,
             textColor: Colors.white,
             onPressed: () {
@@ -85,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text('View all Tasbeeh',
               style: TextStyle(fontSize: 22),),
             padding: EdgeInsets.all(30),
-         )),
+         )),),
 
           ],
       ),
