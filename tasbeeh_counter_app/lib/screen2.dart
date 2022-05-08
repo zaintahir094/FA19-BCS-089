@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'create.dart';
 import 'main.dart';
 
 
@@ -26,12 +27,24 @@ class _Screen2State extends State<Screen2> {
               decoration: InputDecoration(
                 hintText: 'Type Tasbeeh Name',
               )),
-           FlatButton(
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyApp()));
-            },
-            child: Text(''),
-          ),
+          TextField(
+              autocorrect: true,
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                hintText: 'Enter Tasbeeh Count',
+              )),
+          Container(
+              margin: EdgeInsets.all(8),
+              child: FlatButton(
+                color: Colors.blue,
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>create()));
+                },
+                child: Text('create',
+                  style: TextStyle(fontSize: 20),),
+                padding: EdgeInsets.all(20),
+              )),
 ],
     ),
     ),
