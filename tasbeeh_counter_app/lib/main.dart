@@ -23,9 +23,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Tasbeeh Counter App'),
+
+
+
+      
       debugShowCheckedModeBanner: false,
+
     );
+
   }
 }
 
@@ -42,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+
       backgroundColor:const Color(0xFFEFEFEF),
       appBar: AppBar(
           title: Center(
@@ -50,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
           ),
       ),
+
       body: Center(
 
         child:Column(children: <Widget>[
