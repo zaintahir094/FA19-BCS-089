@@ -15,7 +15,7 @@ Custombtn({this.text, this.outlineBtn, this.onPressed,});
     return GestureDetector(
         onTap: onPressed!(),
       child: Container(
-        height: 60,
+        height: 65,
         alignment: Alignment.center,
 
         decoration: BoxDecoration(
@@ -26,9 +26,10 @@ Custombtn({this.text, this.outlineBtn, this.onPressed,});
           ),
           borderRadius: BorderRadius.circular(12.0),
         ),
+
         margin: EdgeInsets.symmetric(
-          horizontal: 30.0,
-          vertical: 24.0,
+          horizontal: 24.0,
+          vertical: 8.0,
         ),
 
         child: Text(
@@ -37,10 +38,8 @@ Custombtn({this.text, this.outlineBtn, this.onPressed,});
           fontSize: 16.0,
           color: _outlineBtn ? Colors.white : Colors.white,
           fontWeight: FontWeight.w600,
-
         ),
         ),
-
       ),
     );
   }

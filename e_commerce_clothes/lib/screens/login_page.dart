@@ -1,4 +1,6 @@
+import 'package:e_commerce_clothes/screens/register_page.dart';
 import 'package:e_commerce_clothes/widgets/Custom_btn.dart';
+import 'package:e_commerce_clothes/widgets/custom_input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -33,18 +35,36 @@ class _LoginPageState extends State<LoginPage> {
               style: Constants.boldHeading,
             ),
           ),
-          Text(
-            'Input Fields',
-            textAlign: TextAlign.center,
+          Column(
+            children: [
+              CustomInput(hintText: "Email..."),
+              CustomInput(hintText: 'Password...'),
+             Custombtn(
+               text: "Login",
+               onPressed: (){
+                 print("Clicked the Login Button");
+               },
+             ),
+            ],
           ),
-        Custombtn(
+        Padding(
+          padding: const EdgeInsets.only(
+            bottom:16.0,
+          ),
 
-           text:"Create new Account",
-          onPressed: (){
-             print("Clicked the create Account Button");
-          },
-          outlineBtn:true,
-         ),
+          child: Custombtn(
+             text:"Create new Account",
+            onPressed: (){
+            //  Navigator.push(
+              //    context,
+               //   MaterialPageRoute(
+                 //     builder:(context) => RegisterPage()
+               //   ),
+            //  );
+             },
+            outlineBtn:true,
+           ),
+        ),
         ],
       ),
           ),
