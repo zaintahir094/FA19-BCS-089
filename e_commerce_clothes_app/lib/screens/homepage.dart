@@ -1,8 +1,10 @@
 import 'package:e_commerce_clothes_app/widgets/category_card.dart';
 import 'package:e_commerce_clothes_app/widgets/category.dart';
+import 'package:e_commerce_clothes_app/widgets/home_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/all_products.dart';
 import '../widgets/category.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,17 +17,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter E-commerce'),
       ),
-      body: ListView(
-        children: <Widget>[
-          SizedBox(height: 10,),
-          Text('Categories', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-         SizedBox(height: 10,),
-         Category(),
-          Text('Products', style: TextStyle(fontSize: 40),),
-         // AllProducts(),
-        ],
-      ),
-
+      body: HomeBody(),
     );
   }
 }

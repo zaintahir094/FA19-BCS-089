@@ -1,6 +1,8 @@
+import 'package:e_commerce_clothes_app/models/products.dart';
+import 'package:e_commerce_clothes_app/screens/pdt_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce_clothes_app/screens/homepage.dart';
-
+import 'package:provider/provider.dart';
 void main() {
   runApp( MyApp());
 }
@@ -11,8 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers:[
-        ChangeNotifierProvider.value()
-      ];
+        ChangeNotifierProvider.value(
+          value: Products(),
+        )
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'E-Commerce App',
@@ -22,6 +26,9 @@ class MyApp extends StatelessWidget {
 
         ),
         home: HomePage(),
+        routes: {
+          DetailPage.routeName: (ctx)=>DetailPage(),
+        },
       ),
     );
   }

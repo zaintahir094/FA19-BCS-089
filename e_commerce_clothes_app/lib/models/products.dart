@@ -12,7 +12,7 @@ class Product with ChangeNotifier{
   Product({required this.id,required this.category,required this.name,required
   this.description,required this.imgUrl,required this.price});
     }
-class Products  with ChangeNotifier{
+class Products with ChangeNotifier{
   List<Product>_items=[
     Product(
       id: '1',
@@ -57,8 +57,20 @@ class Products  with ChangeNotifier{
       description: 'Write the whole description in Products.dart',
     ),
 
+    Product(
+      id: '6',
+      name: "Massab",
+       imgUrl: '',
+      category: 'Buisness',
+      price: 90,
+      description: 'Write the whole description in Products.dart',
+    ),
+
   ];
   List<Product>get items{
     return[..._items];
+  }
+  Product findById(String id) {
+    return _items.firstWhere((pdt) => pdt.id == id);
   }
 }
