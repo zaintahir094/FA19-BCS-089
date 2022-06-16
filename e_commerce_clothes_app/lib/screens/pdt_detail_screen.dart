@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 
 class DetailPage extends StatelessWidget {
 static const routeName = '/Product-detail';
+
+  DetailPage({Key? key}) : super(key: key);
    @override
   Widget build(BuildContext context) {
     final productId=ModalRoute.of(context)?.settings.arguments as

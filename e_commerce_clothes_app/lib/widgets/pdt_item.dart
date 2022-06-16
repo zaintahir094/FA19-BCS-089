@@ -3,6 +3,7 @@ import 'package:e_commerce_clothes_app/screens/pdt_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 class PdtItems extends StatelessWidget {
 final String name;
 final String imageUrl;

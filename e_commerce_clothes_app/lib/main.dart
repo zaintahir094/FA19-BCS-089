@@ -1,3 +1,4 @@
+import 'package:e_commerce_clothes_app/models/cart.dart';
 import 'package:e_commerce_clothes_app/models/products.dart';
 import 'package:e_commerce_clothes_app/screens/pdt_detail_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
       providers:[
         ChangeNotifierProvider.value(
           value: Products(),
+        ),
+
+        ChangeNotifierProvider.value(
+          value: Cart(),
         )
       ],
       child: MaterialApp(
