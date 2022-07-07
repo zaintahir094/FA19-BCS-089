@@ -14,6 +14,7 @@ class Product with ChangeNotifier{
     }
 class Products with ChangeNotifier{
   List<Product>_items=[
+
     Product(
       id: '1',
       name: "Art of the deal",
@@ -21,8 +22,6 @@ class Products with ChangeNotifier{
       category: 'Buisness',
       price: 50,
       description: 'Write the whole description in Products.dart',
-
-
     ),
     Product(
       id: '2',

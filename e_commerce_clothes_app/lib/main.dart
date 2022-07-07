@@ -4,6 +4,7 @@ import 'package:e_commerce_clothes_app/screens/pdt_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce_clothes_app/screens/homepage.dart';
 import 'package:provider/provider.dart';
+import 'package:e_commerce_clothes_app/screens/cart_screen.dart';
 void main() {
   runApp( MyApp());
 }
@@ -33,6 +34,8 @@ class MyApp extends StatelessWidget {
         home: HomePage(),
         routes: {
           DetailPage.routeName: (ctx)=>DetailPage(),
+          CartScreen.routeName: (ctx)=>CartScreen(),
+
         },
       ),
     );

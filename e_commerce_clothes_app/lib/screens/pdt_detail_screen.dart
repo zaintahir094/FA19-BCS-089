@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:e_commerce_clothes_app/models/products.dart';
 import 'package:provider/provider.dart';
 
+import '../models/cart.dart';
+
 class DetailPage extends StatelessWidget {
 static const routeName = '/Product-detail';
 
@@ -12,7 +14,9 @@ static const routeName = '/Product-detail';
   Widget build(BuildContext context) {
     final productId=ModalRoute.of(context)?.settings.arguments as
     String;
-    final loadedPdt = Provider.of<Products>(context).findById(productId);
+    final loadedPdt = Provider.of<Products>(context).findById
+      (productId);
+    final cart = Provider.of<Cart>(context);
     return Scaffold(
       appBar: AppBar(
       title: Text(loadedPdt.name),
@@ -41,7 +45,8 @@ static const routeName = '/Product-detail';
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: null,child: Icon(Icons.shopping_cart, size: 30,),),
+        onPressed: null,
+        child: Icon(Icons.shopping_cart, size: 30,),),
     );
   }
 }

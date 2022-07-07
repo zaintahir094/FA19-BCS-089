@@ -1,3 +1,4 @@
+import 'package:e_commerce_clothes_app/screens/cart_screen.dart';
 import 'package:e_commerce_clothes_app/widgets/category_card.dart';
 import 'package:e_commerce_clothes_app/widgets/category.dart';
 import 'package:e_commerce_clothes_app/widgets/home_body.dart';
@@ -16,6 +17,10 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(),
       appBar: AppBar(
         title: Text('Flutter E-commerce'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.shopping_cart, size: 30,), onPressed:()
+      => Navigator.of(context).pushNamed(CartScreen.routeName))
+        ],
       ),
       body: HomeBody(),
     );
