@@ -9,43 +9,61 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fee Management App',
-      theme: ThemeData(
+    home: Scaffold(
+    body: Center(
+     child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+       children: [
 
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Fee Management App'),
-    );
-  }
-}
+         Container(
+           margin: const EdgeInsets.all(5),
+           child: ElevatedButton.icon(
+               onPressed: () {},
+               icon: Icon(Icons.account_circle),
+               label: Text('Admin'),
+           style: ElevatedButton.styleFrom(
+               primary: Colors.amber,
+             textStyle: TextStyle(
+               fontSize: 22,
+                 fontWeight: FontWeight.bold,
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
+             ),
+           ),
+           )),
 
-  final String title;
+         Container(
+             margin: const EdgeInsets.all(5),
+             child: ElevatedButton.icon(
+               onPressed: () {},
+               icon: Icon(Icons.account_circle),
+               label: Text('Teacher'),
+               style: ElevatedButton.styleFrom(
+                 primary: Colors.amber,
+                 textStyle: TextStyle(
+                   fontWeight: FontWeight.bold,
+                   color: Colors.black,
+                   fontSize: 22,
+                 ),
+               ),
+             )),
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+         Container(
+             margin: const EdgeInsets.all(5),
+             child: ElevatedButton.icon(
+               onPressed: () {},
+               icon: Icon(Icons.account_circle),
+               label: Text('Student'),
+               style: ElevatedButton.styleFrom(
+                 primary: Colors.amber,
+                 textStyle: TextStyle(
+                   color: Colors.black,
+                   fontWeight: FontWeight.bold,
+                   fontSize: 22,
+                 ),
+               ),
+             )),
 
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-
-        ),
-      ),
- // This trailing comma makes auto-formatting nicer for build methods.
-    );
+       ],))));
   }
 }
