@@ -9,7 +9,62 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
     home: Scaffold(
+
+        backgroundColor:const Color(0xFFEFEFEF),
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              ('Fee Management System '),
+            ),
+          ),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                child: Stack(
+                  children: [
+                    Positioned(
+                      bottom: 8.0,
+                      left: 4.0,
+                      child: Text(
+                        "FA19-BCS-089",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    )
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "",
+                    ),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.edit),
+                title: Text("Zain Tahir"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.mail),
+                title: Text("zainch5094@gmail.com"),
+                onTap: () {},
+              ),
+
+            ],
+          ),
+        ),
     body: Center(
      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,10 +81,7 @@ class MyApp extends StatelessWidget {
              textStyle: TextStyle(
                fontSize: 22,
                  fontWeight: FontWeight.bold,
-
-
-             ),
-           ),
+             ),),
            )),
 
          Container(
