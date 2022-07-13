@@ -9,11 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
     home: Scaffold(
-
-        backgroundColor:const Color(0xFFEFEFEF),
         appBar: AppBar(
+          backgroundColor: Colors.black54,
+            toolbarHeight: 80,
           title: Center(
             child: Text(
               ('Fee Management System '),
@@ -25,23 +24,28 @@ class MyApp extends StatelessWidget {
             children: [
               DrawerHeader(
                 child: Stack(
-                  children: [
+                  children: const [
                     Positioned(
                       bottom: 8.0,
                       left: 4.0,
                       child: Text(
                         "FA19-BCS-089",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold,),
                       ),
                     )
                   ],
                 ),
                 decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black,
+                width: 1,
+                  ),
+
+
+
                   color: Colors.amber,
                   image: DecorationImage(
                     image: NetworkImage(
-                      "",
-                    ),
+                      "",),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -61,57 +65,78 @@ class MyApp extends StatelessWidget {
                 title: Text("zainch5094@gmail.com"),
                 onTap: () {},
               ),
-
             ],
           ),
         ),
+
     body: Center(
      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
        children: [
 
          Container(
-           margin: const EdgeInsets.all(5),
+
+             width:1450,
+             height: 80,
+           margin: const EdgeInsets.all(20),
            child: ElevatedButton.icon(
                onPressed: () {},
                icon: Icon(Icons.account_circle),
                label: Text('Admin'),
-           style: ElevatedButton.styleFrom(
+           style: ElevatedButton.styleFrom( side: BorderSide(width:2, color:Colors.black), //border width and color
+             elevation: 3, //elevation of button
+             shape: RoundedRectangleBorder( //to set border radius to button
+                 borderRadius: BorderRadius.circular(30)
+             ),
+
                primary: Colors.amber,
              textStyle: TextStyle(
-               fontSize: 22,
+               fontSize: 30,
                  fontWeight: FontWeight.bold,
              ),),
            )),
 
          Container(
-             margin: const EdgeInsets.all(5),
+             width:1450,
+             height: 80,
+             margin: const EdgeInsets.all(20),
              child: ElevatedButton.icon(
                onPressed: () {},
                icon: Icon(Icons.account_circle),
                label: Text('Teacher'),
-               style: ElevatedButton.styleFrom(
+               style: ElevatedButton.styleFrom( side: BorderSide(width:2, color:Colors.black), //border width and color
+                 elevation: 3, //elevation of button
+                 shape: RoundedRectangleBorder( //to set border radius to button
+                     borderRadius: BorderRadius.circular(30)
+                 ),
+
                  primary: Colors.amber,
                  textStyle: TextStyle(
                    fontWeight: FontWeight.bold,
                    color: Colors.black,
-                   fontSize: 22,
+                   fontSize: 30,
                  ),
                ),
              )),
 
          Container(
-             margin: const EdgeInsets.all(5),
+             width:1450,
+             height: 80,
+             margin: const EdgeInsets.all(20),
              child: ElevatedButton.icon(
                onPressed: () {},
                icon: Icon(Icons.account_circle),
                label: Text('Student'),
-               style: ElevatedButton.styleFrom(
+                 style: ElevatedButton.styleFrom( side: BorderSide(width:2, color:Colors.black), //border width and color
+                   elevation: 3, //elevation of button
+                   shape: RoundedRectangleBorder( //to set border radius to button
+                       borderRadius: BorderRadius.circular(30)
+                   ),
                  primary: Colors.amber,
                  textStyle: TextStyle(
                    color: Colors.black,
                    fontWeight: FontWeight.bold,
-                   fontSize: 22,
+                   fontSize: 30,
                  ),
                ),
              )),
