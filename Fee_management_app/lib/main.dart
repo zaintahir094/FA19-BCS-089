@@ -1,4 +1,6 @@
 import 'package:fee_management_app/screens/student_login.dart';
+import 'package:fee_management_app/screens/teacher_login.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -72,8 +74,8 @@ class MyApp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
        children: [
 
-         Container(
 
+         Container(
              width:1450,
              height: 80,
            margin: const EdgeInsets.all(20),
@@ -99,7 +101,10 @@ class MyApp extends StatelessWidget {
              height: 80,
              margin: const EdgeInsets.all(20),
              child: ElevatedButton.icon(
-               onPressed: () {},
+               onPressed: () {
+                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>teachlog())
+                 );
+               },
                icon: Icon(Icons.account_circle),
                label: Text('Teacher'),
                style: ElevatedButton.styleFrom( side: BorderSide(width:2, color:Colors.black), //border width and color
@@ -123,11 +128,10 @@ class MyApp extends StatelessWidget {
              margin: const EdgeInsets.all(20),
              child: ElevatedButton.icon(
                onPressed: () {
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => studlog()),
+                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>studlog())
                  );
                },
+
                icon: Icon(Icons.account_circle),
                label: Text('Student'),
                  style: ElevatedButton.styleFrom( side: BorderSide(width:2, color:Colors.black), //border width and color

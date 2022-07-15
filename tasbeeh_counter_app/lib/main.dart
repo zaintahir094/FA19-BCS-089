@@ -23,17 +23,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-
-
-
-      
       debugShowCheckedModeBanner: false,
-
-    );
-
+    )
   }
 }
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -47,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-
       backgroundColor:const Color(0xFFEFEFEF),
       appBar: AppBar(
           title: Center(
