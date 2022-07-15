@@ -1,3 +1,4 @@
+import 'package:fee_management_app/screens/student_login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,9 +40,6 @@ class MyApp extends StatelessWidget {
                   border: Border.all(color: Colors.black,
                 width: 1,
                   ),
-
-
-
                   color: Colors.amber,
                   image: DecorationImage(
                     image: NetworkImage(
@@ -124,7 +122,12 @@ class MyApp extends StatelessWidget {
              height: 80,
              margin: const EdgeInsets.all(20),
              child: ElevatedButton.icon(
-               onPressed: () {},
+               onPressed: () {
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => studlog()),
+                 );
+               },
                icon: Icon(Icons.account_circle),
                label: Text('Student'),
                  style: ElevatedButton.styleFrom( side: BorderSide(width:2, color:Colors.black), //border width and color
