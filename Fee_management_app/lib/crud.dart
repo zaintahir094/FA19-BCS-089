@@ -1,9 +1,9 @@
-import 'package:fee_management_app/update.dart';
+import 'package:fee_management_app/Widgets/update.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'add.dart';
-import 'delete.dart';
+import 'Widgets/add.dart';
+import 'Widgets/delete.dart';
 
 class crud extends StatefulWidget {
   const crud({Key? key}) : super(key: key);
