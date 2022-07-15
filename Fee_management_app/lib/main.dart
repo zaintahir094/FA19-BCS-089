@@ -10,8 +10,10 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
     home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black54,
@@ -73,7 +75,6 @@ class MyApp extends StatelessWidget {
      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
        children: [
-
 
          Container(
              width:1450,
