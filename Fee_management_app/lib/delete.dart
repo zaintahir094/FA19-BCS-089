@@ -9,43 +9,24 @@ class delete extends StatefulWidget {
 }
 
 class _deleteState extends State<delete> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         class QuoteCard extends StatelessWidget {
 
-
         final Function? delete;
         QuoteCard({ required this.quote, this.delete });
+        Widget build(BuildContext context) {
+        return Card(static Future<void> deleteItem({
+        required String docId,
+        }) async {
+        DocumentReference documentReferencer =
+        _mainCollection.doc(userUid).collection('items').doc(docId);
 
-        @override
-                Widget build(BuildContext context) {
-        return Card(
-        margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-              child: Padding(
-        padding: const EdgeInsets.all(12.0),
-                           child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                 children: <Widget>[
-                               Text(
-                         quote.text,
-                 style: TextStyle(
-                     fontSize: 18.0,
-                    color: Colors.grey[600],
-        ),
-        ),
-                   SizedBox(height: 6.0),
-        Text(
-                  quote.author,
-        style: TextStyle(
-        fontSize: 14.0,
-                   color: Colors.grey[800],
-        ),
-        ),               SizedBox(height: 8.0),
-                                 TextButton.icon(
-                            onPressed: () => delete,
-                                  label: Text('delete quote'),
-                            icon: Icon(Icons.delete),
+        await documentReferencer
+            .delete()
+            .whenComplete(() => print('Note item deleted from the database'))
+            .catchError((e) => print(e));
+        }
         )
         onPressed: () {
         if (delete != null) {
