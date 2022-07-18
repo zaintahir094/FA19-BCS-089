@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058005376197",
+    "project_id": "fyptutor-de030",
+    "storage_bucket": "fyptutor-de030.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058005376197:android:fb7f2a733658f1f66324ac",
+        "android_client_info": {
+          "package_name": "com.example.tuition_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058005376197-ijfpf8915pbb0vi64dt19bt58768tpq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdfs5NQ6glDHYNVf8v_EyOA9Rt9-LBExw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058005376197-ijfpf8915pbb0vi64dt19bt58768tpq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
